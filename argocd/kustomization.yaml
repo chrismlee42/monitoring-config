@@ -3,20 +3,16 @@ kind: Kustomization
 metadata:
   name: monitoring-config
 
-commonAnnotations:
-  "helm.sh/resource-policy": keep
-
-commonLabels:
-  app: monitoring
-  managedBy: argocd
-  managementCodeGroup: chrismlee42-dev
-  managementCodeProject: monitoring-config
+labels:
+  - pairs:
+      app: monitoring
+      managedBy: argocd
+      managementCodeGroup: chrismlee42-dev
+      managementCodeProject: monitoring-config
 
 namespace: monitoring
 
 resources:
-  # Determine latest stable version from https://github.com/prometheus-operator/prometheus-operator/releases
-  # - https://github.com/prometheus-operator/prometheus-operator/releases/download/v0.84.1/bundle.yaml
   - namespace.yaml
   - prometheus-clusterrole.yaml
   - prometheus-clusterrolebinding.yaml
