@@ -9,6 +9,9 @@ spec:
   selector:
     matchLabels:
       service-monitor: node-exporter
+  namespaceSelector:
+    matchNames:
+    - monitoring
   endpoints:
   - port: http-metrics
     interval: 30s
