@@ -14,6 +14,7 @@ namespace: monitoring
 
 resources:
   - namespace.yaml
+  - node-exporter-daemonset.yaml
   - prometheus-clusterrole.yaml
   - prometheus-clusterrolebinding.yaml
   - prometheus-prometheus.yaml
