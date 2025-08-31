@@ -4,6 +4,7 @@ metadata:
   labels:
     app.kubernetes.io/component: exporter
     app.kubernetes.io/name: node-exporter
+    app: node-exporter
     service-monitor: node-exporter
   name: node-exporter
 spec:
