@@ -8,6 +8,7 @@ spec:
   jobLabel: service-monitor
   selector:
     matchLabels:
+      app.kubernetes.io/name: node-exporter
       service-monitor: node-exporter
   namespaceSelector:
     matchNames:
