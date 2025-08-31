@@ -13,4 +13,4 @@ spec:
     - targets:
         - 192.168.1.119:9100
       labels:
-        role: node-exporter
+        app.kubernetes.io/name: node-exporter
