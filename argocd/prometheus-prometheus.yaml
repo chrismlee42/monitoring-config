@@ -3,7 +3,19 @@ kind: Prometheus
 metadata:
   name: prometheus
 spec:
+  podMonitorSelector:
+    matchExpressions:
+      - key: app.kubernetes.io/name
+        operator: In
+        values:
+          - node-exporter
+      - key: prometheus-monitored
+        operator: Exists
+  resources:
+    requests:
+      memory: 400Mi
   serviceAccountName: prometheus
   serviceMonitorSelector:
     matchLabels:
       app: monitoring
+
