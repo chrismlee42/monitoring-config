@@ -10,7 +10,7 @@ spec:
       sourceLabels: [__address__]
       targetLabel: instance
   staticConfigs:
-    - targets:
-        - 192.168.1.119:9100
-      labels:
+    - labels:
         app.kubernetes.io/name: node-exporter
+      targets:
+        - 192.168.1.119:9100
