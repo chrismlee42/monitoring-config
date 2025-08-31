@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ScrapeConfig
+metadata:
+  name: node-exporter
+spec:
+  relabelings:
+    - action: replace
+      regex: (.+):9100
+      replacement: $1
+      sourceLabels: [__address__]
+      targetLabel: instance
+  staticConfigs:
+    - targets:
+        - 192.168.1.119:9100
+      labels:
+        role: node-exporter
