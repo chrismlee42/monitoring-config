@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ServiceMonitor
+metadata:
+  name: node-exporter
+  labels:
+    service-monitor: node-exporter
+spec:
+  jobLabel: service-monitor
+  selector:
+    matchLabels:
+      service-monitor: node-exporter
+  endpoints:
+  - port: http-metrics
+    interval: 30s

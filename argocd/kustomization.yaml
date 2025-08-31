@@ -16,6 +16,7 @@ resources:
   - namespace.yaml
   - node-exporter-daemonset.yaml
   - node-exporter-service.yaml
+  - node-exporter-servicemonitor.yaml
   - prometheus-clusterrole.yaml
   - prometheus-clusterrolebinding.yaml
   - prometheus-httproute.yaml
