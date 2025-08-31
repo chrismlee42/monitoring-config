@@ -20,5 +20,5 @@ resources:
   - namespace.yaml
   - prometheus-clusterrole.yaml
   - prometheus-clusterrolebinding.yaml
+  - prometheus-prometheus.yaml
   - prometheus-serviceaccount.yaml
-  - prometheus.yaml
