@@ -7,7 +7,7 @@ spec:
     matchLabels:
       dashboards: "grafana"
   datasource:
-    name: prom1
+    name: prometheus
     type: prometheus
     access: proxy
     url: http://prometheus-operated:9090
