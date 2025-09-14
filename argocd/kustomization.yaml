@@ -18,6 +18,7 @@ resources:
   #- k8s-cluster-summary-grafanadashboard.yaml
   #- k8s-dashboard-grafanadashboard.yaml
   - kube-state-metrics-scrapeconfig.yaml
+  - kube-state-metrics-servicemonitor.yaml
   - namespace.yaml
   - node-exporter-daemonset.yaml
   - node-exporter-full-grafanadashboard.yaml
