@@ -17,7 +17,7 @@ resources:
   - grafana-httproute.yaml
   - namespace.yaml
   - node-exporter-daemonset.yaml
-  - node-exporter-grafanadatasource.yaml
+  # - node-exporter-grafanadatasource.yaml
   - node-exporter-networkpolicy.yaml
   - node-exporter-scrapeconfig.yaml
   - node-exporter-service.yaml
