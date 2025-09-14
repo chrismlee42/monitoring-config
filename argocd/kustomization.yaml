@@ -17,6 +17,7 @@ resources:
   - grafana-httproute.yaml
   #- k8s-cluster-summary-grafanadashboard.yaml
   #- k8s-dashboard-grafanadashboard.yaml
+  - kube-state-metrics-scrapeconfig.yaml
   - namespace.yaml
   - node-exporter-daemonset.yaml
   - node-exporter-full-grafanadashboard.yaml
