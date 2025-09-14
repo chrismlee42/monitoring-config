@@ -1,0 +1,10 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ScrapeConfig
+metadata:
+  name: prometheus
+spec:
+  staticConfigs:
+    - labels:
+        app.kubernetes.io/name: prometheus
+      targets:
+        - 127.0.0.1:9090
