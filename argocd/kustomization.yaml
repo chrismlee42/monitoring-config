@@ -17,6 +17,7 @@ resources:
   - grafana-httproute.yaml
   - namespace.yaml
   - node-exporter-daemonset.yaml
+  - node-exporter-grafanadatasource.yaml
   - node-exporter-networkpolicy.yaml
   - node-exporter-scrapeconfig.yaml
   - node-exporter-service.yaml
@@ -26,4 +27,6 @@ resources:
   - prometheus-grafanadatasource.yaml
   - prometheus-httproute.yaml
   - prometheus-prometheus.yaml
+  - prometheus-scrapeconfig.yaml
+  - prometheus-servicemonitor.yaml
   - prometheus-serviceaccount.yaml
