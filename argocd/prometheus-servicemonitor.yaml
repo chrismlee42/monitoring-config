@@ -10,4 +10,4 @@ spec:
     port: web
   selector:
     matchLabels:
-      operated-prometheus: true
+      operated-prometheus: "true"
