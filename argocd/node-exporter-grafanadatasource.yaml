@@ -7,11 +7,11 @@ spec:
     matchLabels:
       dashboards: "grafana"
   datasource:
-    name: prom1
+    name: node-exporter
     type: prometheus
     access: proxy
     url: http://node-exporter:9100
-    isDefault: true
+    isDefault: false
     jsonData:
       'tlsSkipVerify': true
       'timeInterval': "5s"
