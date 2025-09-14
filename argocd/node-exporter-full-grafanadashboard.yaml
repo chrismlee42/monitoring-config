@@ -3,8 +3,11 @@ kind: GrafanaDashboard
 metadata:
   name: node-exporter-full
 spec:
-  resyncPeriod: 30s
+  datasources:
+    - datasourceName: prometheus
+      inputName: prometheus
   instanceSelector:
     matchLabels:
       dashboards: "grafana"
+  resyncPeriod: 30s
   url: https://grafana.com/api/dashboards/1860/revisions/41/download
