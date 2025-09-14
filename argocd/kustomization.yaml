@@ -15,6 +15,7 @@ namespace: monitoring
 resources:
   - grafana-grafana.yaml
   - grafana-httproute.yaml
+  - k8s-cluster-summary-grafanadashboard.yaml
   - namespace.yaml
   - node-exporter-daemonset.yaml
   - node-exporter-full-grafanadashboard.yaml
