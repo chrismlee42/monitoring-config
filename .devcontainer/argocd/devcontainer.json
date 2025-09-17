@@ -1,6 +1,6 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
-	"name": "monitoring-argocd",
+	"name": "monitoring-config-argocd",
     "customizations": {
         "vscode": {
             "extensions": [
