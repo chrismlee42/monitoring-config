@@ -15,6 +15,7 @@ namespace: monitoring
 resources:
   - elk-elasticsearch.yaml
   - elk-kibana.yaml
+  - elk-logstash.yaml
   - grafana-grafana.yaml
   - grafana-httproute.yaml
   #- k8s-cluster-summary-grafanadashboard.yaml
