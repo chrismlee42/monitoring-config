@@ -23,10 +23,10 @@ spec:
     - name: beats
       service:
         spec:
-          type: NodePort
           ports:
-            - port: 5044
-              name: "filebeat"
+            - name: "filebeat"
+              port: 5044
               protocol: TCP
               targetPort: 5044
+          type: ClusterIP
   version: 9.1.4
