@@ -6,6 +6,7 @@ spec:
   count: 1
   elasticsearchRefs:
     - name: elk
+      clusterName: elk
   pipelines:
     - pipeline.id: main
       config.string: |
