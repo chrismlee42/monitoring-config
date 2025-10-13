@@ -17,6 +17,7 @@ spec:
     - backendRefs:
         - group: ""
           kind: Service
-          name: grafana-service
+          #name: grafana-service
+          name: grafana
           port: 3000
           weight: 1

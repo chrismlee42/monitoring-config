@@ -20,7 +20,7 @@ resources:
   - elk-logstash-beats-httproute.yaml
   - elk-logstash.yaml
   #- grafana-grafana.yaml
-  #- grafana-httproute.yaml
+  - grafana-httproute.yaml
   #- k8s-cluster-summary-grafanadashboard.yaml
   #- k8s-dashboard-grafanadashboard.yaml
   - kube-state-metrics-scrapeconfig.yaml
