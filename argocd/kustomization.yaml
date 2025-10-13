@@ -19,7 +19,7 @@ resources:
   - elk-kibana.yaml
   - elk-logstash-beats-httproute.yaml
   - elk-logstash.yaml
-  #- grafana-grafana.yaml
+  - grafana-grafana.yaml
   - grafana-httproute.yaml
   #- k8s-cluster-summary-grafanadashboard.yaml
   #- k8s-dashboard-grafanadashboard.yaml
@@ -27,7 +27,7 @@ resources:
   - kube-state-metrics-servicemonitor.yaml
   - namespace.yaml
   - node-exporter-daemonset.yaml
-  #- node-exporter-full-grafanadashboard.yaml
+  - node-exporter-full-grafanadashboard.yaml
   - node-exporter-networkpolicy.yaml
   - node-exporter-scrapeconfig.yaml
   - node-exporter-service.yaml
