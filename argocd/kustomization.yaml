@@ -12,26 +12,36 @@ labels:
 
 namespace: monitoring
 
+patchesStrategicMerge:
+  - fluentd-daemonset-patch.yaml
+
 resources:
+  # Common namespace for all monitoring components
+  - namespace.yaml
+  # Fluentd daemonset for Elasticsearch
+  #- https://raw.githubusercontent.com/fluent/fluentd-kubernetes-daemonset/refs/tags/v1.19.0-1.1/fluentd-daemonset-elasticsearch.yaml
+  # ELK Stack
   - elk-elasticsearch-httproute.yaml
   - elk-elasticsearch.yaml
   - elk-kibana-httproute.yaml
   - elk-kibana.yaml
   - elk-logstash-beats-httproute.yaml
   - elk-logstash.yaml
+  # Grafana
   - grafana-grafana.yaml
   - grafana-httproute.yaml
   #- k8s-cluster-summary-grafanadashboard.yaml
   #- k8s-dashboard-grafanadashboard.yaml
   - kube-state-metrics-scrapeconfig.yaml
   - kube-state-metrics-servicemonitor.yaml
-  - namespace.yaml
+  # Node Exporter
   - node-exporter-daemonset.yaml
   - node-exporter-full-grafanadashboard.yaml
   - node-exporter-networkpolicy.yaml
   - node-exporter-scrapeconfig.yaml
   - node-exporter-service.yaml
   - node-exporter-servicemonitor.yaml
+  # Prometheus
   - prometheus-clusterrole.yaml
   - prometheus-clusterrolebinding.yaml
   - prometheus-grafanadatasource.yaml
