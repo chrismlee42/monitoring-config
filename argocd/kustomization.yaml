@@ -7,7 +7,7 @@ labels:
   - pairs:
       app: monitoring
       managedBy: argocd
-      managementCodeGroup: chrismlee42-dev
+      managementCodeGroup: chrismlee42
       managementCodeProject: monitoring-config
 
 namespace: monitoring
