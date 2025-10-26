@@ -6,6 +6,33 @@ spec:
   nodeSets:
   - config:
       node.store.allow_mmap: false
+      xpack.security.transport.ssl.certificate: /usr/share/elasticsearch/config/cert-manager-certs/tls.crt
+      xpack.security.transport.ssl.key: /usr/share/elasticsearch/config/cert-manager-certs/tls.key
     count: 1
     name: default
+    podTemplate:
+      spec:
+        containers:
+        - name: elasticsearch
+          volumeMounts:
+          - mountPath: /usr/share/elasticsearch/config/cert-manager-certs
+            name: cert-manager-certs
+        volumes:
+        - name: cert-manager-certs
+          csi:
+            driver: csi.cert-manager.io
+            readOnly: true
+            volumeAttributes:
+              csi.cert-manager.io/issuer-name: self-signed-ca
+              csi.cert-manager.io/issuer-kind: ClusterIssuer
+              csi.cert-manager.io/dns-names: "${POD_NAME}.${POD_NAMESPACE}.svc.cluster.local"
+  transport:
+    service:
+      spec:
+        type: LoadBalancer
+    tls:
+      certificateAuthorities:
+        configMapName: trust
+      selfSignedCertificates:
+        disabled: true
   version: 9.1.4

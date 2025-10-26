@@ -45,3 +45,5 @@ resources:
   - prometheus-scrapeconfig.yaml
   - prometheus-servicemonitor.yaml
   - prometheus-serviceaccount.yaml
+  # Cert-Manager Self-Signed CA Trust Bundle
+  - trust-bundle.yaml
