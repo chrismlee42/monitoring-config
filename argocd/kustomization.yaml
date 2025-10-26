@@ -12,14 +12,9 @@ labels:
 
 namespace: monitoring
 
-patchesStrategicMerge:
-  - fluentd-daemonset-patch.yaml
-
 resources:
   # Common namespace for all monitoring components
   - namespace.yaml
-  # Fluentd daemonset for Elasticsearch
-  #- https://raw.githubusercontent.com/fluent/fluentd-kubernetes-daemonset/refs/tags/v1.19.0-1.1/fluentd-daemonset-elasticsearch.yaml
   # ELK Stack
   - elk-elasticsearch-httproute.yaml
   - elk-elasticsearch.yaml
