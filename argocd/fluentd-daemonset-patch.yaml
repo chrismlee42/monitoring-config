@@ -21,7 +21,7 @@ spec:
                   name: fluentd-config
                   key: elasticsearch-user
             - name: FLUENT_ELASTICSEARCH_SCHEME
-              value: "http"
+              value: "https"
             - name: LOGZIO_TOKEN
               valueFrom:
                 secretKeyRef:
