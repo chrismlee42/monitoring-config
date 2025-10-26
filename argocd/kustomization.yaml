@@ -16,7 +16,7 @@ resources:
   # Common namespace for all monitoring components
   - namespace.yaml
   # ELK Stack
-  - elk-elasticsearch-httproute.yaml
+  # - elk-elasticsearch-httproute.yaml
   - elk-elasticsearch.yaml
   - elk-kibana-httproute.yaml
   - elk-kibana.yaml
