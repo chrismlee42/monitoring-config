@@ -20,7 +20,7 @@ spec:
         }
         output {
           elasticsearch {
-            hosts => [ "http://elk-es-http:9200" ]
+            hosts => [ "https://elk-es-http:9200" ]
           }
         }
   services:
