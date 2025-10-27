@@ -6,4 +6,11 @@ spec:
   count: 1
   elasticsearchRef:
     name: elk
+  http:
+    service:
+      metadata:
+        annotations:
+          external-dns.alpha.kubernetes.io/hostname: kibana.service.clee.private.morphacy.net,kibana.service.chris-pc.clee.private.morphacy.net
+      spec:
+        type: LoadBalancer
   version: 9.1.4

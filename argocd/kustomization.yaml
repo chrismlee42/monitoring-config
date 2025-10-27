@@ -18,7 +18,7 @@ resources:
   # ELK Stack
   # - elk-elasticsearch-httproute.yaml
   - elk-elasticsearch.yaml
-  - elk-kibana-httproute.yaml
+  # - elk-kibana-httproute.yaml
   - elk-kibana.yaml
   - elk-logstash-beats-httproute.yaml
   - elk-logstash.yaml
