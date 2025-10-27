@@ -3,6 +3,18 @@ kind: Elasticsearch
 metadata:
   name: elk
 spec:
+  http:
+    service:
+      metadata:
+        annotations:
+          external-dns.alpha.kubernetes.io/hostname: elasticsearch.service.clee.private.morphacy.net,elasticsearch.service.chris-pc.clee.private.morphacy.net
+      spec:
+        type: LoadBalancer
+    # tls:
+    #   certificateAuthorities:
+    #     configMapName: trust
+    #   selfSignedCertificates:
+    #     disabled: true
   nodeSets:
   - config:
       node.store.allow_mmap: false
@@ -27,12 +39,6 @@ spec:
               csi.cert-manager.io/issuer-kind: ClusterIssuer
               csi.cert-manager.io/dns-names: "${POD_NAME}.${POD_NAMESPACE}.svc.cluster.local"
   transport:
-    service:
-      metadata:
-        annotations:
-          external-dns.alpha.kubernetes.io/hostname: elasticsearch.service.clee.private.morphacy.net,elasticsearch.service.chris-pc.clee.private.morphacy.net
-      spec:
-        type: LoadBalancer
     tls:
       certificateAuthorities:
         configMapName: trust
