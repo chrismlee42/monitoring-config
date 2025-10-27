@@ -14,7 +14,7 @@ spec:
           beats {
             port => 5044
           }
-          logs {
+          http {
             port => 9600
           }
         }
