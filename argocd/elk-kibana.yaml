@@ -11,10 +11,10 @@ spec:
       metadata:
         annotations:
           external-dns.alpha.kubernetes.io/hostname: kibana.service.clee.private.morphacy.net,kibana.service.chris-pc.clee.private.morphacy.net
-      ports:
-        - name: https
-          port: 443
-          targetPort: 5601
       spec:
+        ports:
+          - name: https
+            port: 443
+            targetPort: 5601
         type: LoadBalancer
   version: 9.1.4
