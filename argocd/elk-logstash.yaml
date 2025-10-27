@@ -30,13 +30,4 @@ spec:
               protocol: TCP
               targetPort: 5044
           type: ClusterIP
-    - name: logs
-      service:
-        spec:
-          ports:
-            - name: "logs"
-              port: 9600
-              protocol: TCP
-              targetPort: 9600
-          type: ClusterIP
   version: 9.1.4
