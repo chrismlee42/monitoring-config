@@ -14,9 +14,6 @@ spec:
           beats {
             port => 5044
           }
-          http {
-            port => 9600
-          }
         }
         output {
           elasticsearch {
