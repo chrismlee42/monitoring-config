@@ -13,8 +13,6 @@ spec:
     tls:
       certificate:
         secretName: elk-es-http-tls
-      selfSignedCertificates:
-        disabled: true
   nodeSets:
   - config:
       node.store.allow_mmap: false
