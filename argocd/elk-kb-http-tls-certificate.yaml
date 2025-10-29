@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: elk-kb-http-tls
+spec:
+  commonName: kibana.service.clee.private.morphacy.net
+  dnsNames:
+    - "kibana.service.clee.private.morphacy.net"
+    - "kibana.service.chris-pc.clee.private.morphacy.net"
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-prod
+  secretName: elk-kb-http-tls
