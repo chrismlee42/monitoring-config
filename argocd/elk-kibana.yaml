@@ -21,4 +21,6 @@ spec:
     tls:
       certificate:
         secretName: elk-kb-http-tls
+      selfSignedCertificate:
+        disabled: true
   version: 9.1.4
