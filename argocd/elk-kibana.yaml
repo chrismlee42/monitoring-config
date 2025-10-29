@@ -17,4 +17,9 @@ spec:
             port: 443
             targetPort: 5601
         type: LoadBalancer
+    tls:
+      certificate:
+        secretName: elk-kb-http-tls
+      selfSignedCertificates:
+        disabled: true
   version: 9.1.4

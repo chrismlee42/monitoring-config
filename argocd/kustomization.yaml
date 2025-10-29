@@ -19,6 +19,7 @@ resources:
   # - elk-elasticsearch-httproute.yaml
   - elk-elasticsearch.yaml
   - elk-es-http-tls-secret.yaml
+  - elk-kb-https-tls-secret.yaml
   # - elk-kibana-httproute.yaml
   - elk-kibana.yaml
   - elk-logstash-beats-httproute.yaml
