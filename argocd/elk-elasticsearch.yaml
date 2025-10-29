@@ -10,11 +10,11 @@ spec:
           external-dns.alpha.kubernetes.io/hostname: elasticsearch.service.clee.private.morphacy.net,elasticsearch.service.chris-pc.clee.private.morphacy.net
       spec:
         type: LoadBalancer
-    # tls:
-    #   certificateAuthorities:
-    #     configMapName: trust
-    #   selfSignedCertificates:
-    #     disabled: true
+    tls:
+      certificate:
+        secretName: elk-es-http-tls
+      selfSignedCertificates:
+        disabled: true
   nodeSets:
   - config:
       node.store.allow_mmap: false
@@ -40,8 +40,13 @@ spec:
               csi.cert-manager.io/dns-names: "${POD_NAME}.${POD_NAMESPACE}.svc.cluster.local"
   transport:
     tls:
+      # certificate:
+      #   sercretName: elk-es-transport-tls
       certificateAuthorities:
         configMapName: trust
       selfSignedCertificates:
         disabled: true
+      # subjectAltNames:
+      #   - elk-es-transport.service.clee.private.morphacy.net
+      #   - elk-es-transport.service.chris-pc.clee.private.morphacy.net
   version: 9.1.4
